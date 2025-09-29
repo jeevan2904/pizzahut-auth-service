@@ -7,7 +7,9 @@
   "type": "module",
   "main": "index.js",
   "scripts": {
-    "dev": "node src/server.js",
+    "build": "tsc -p .",
+    "start": "node dist/server.js",
+    "dev": "nodemon --watch src --ext ts,js,json --exec \"node --loader ts-node/esm src/server.ts\"",
     "format:check": "prettier . --check",
     "format:fix": "prettier . --write",
     "lint:check": "eslint .",
@@ -17,11 +19,14 @@
   },
   "devDependencies": {
     "@eslint/js": "^9.36.0",
+    "@types/express": "^5.0.3",
     "@types/node": "^24.5.2",
     "eslint": "^9.36.0",
     "husky": "^9.1.7",
     "lint-staged": "^16.2.3",
+    "nodemon": "^3.1.10",
     "prettier": "3.6.2",
+    "ts-node": "^10.9.2",
     "typescript": "^5.9.2",
     "typescript-eslint": "^8.44.1"
   },
@@ -32,6 +37,7 @@
     ]
   },
   "dependencies": {
-    "dotenv": "^17.2.2"
+    "dotenv": "^17.2.2",
+    "express": "^5.1.0"
   }
 }
