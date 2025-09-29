@@ -17,6 +17,7 @@ export default defineConfig(
     rules: {
       'no-console': 'off',
       'dot-notation': 'error',
+      '@typescript-eslint/no-unsafe-member-access': 'off',
     },
   },
   {
