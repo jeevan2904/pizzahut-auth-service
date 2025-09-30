@@ -1,4 +1,5 @@
 import winston from 'winston';
+
 import { Config } from './index.ts';
 
 const logger = winston.createLogger({
