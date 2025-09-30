@@ -10,7 +10,7 @@
     "module": "nodenext",
     "moduleResolution": "nodenext",
     "target": "es2020",
-    "types": ["node"],
+    "types": ["node", "jest"],
     // For nodejs:
     // "lib": ["esnext"],
     // "types": ["node"],
@@ -46,6 +46,8 @@
     "forceConsistentCasingInFileNames": true,
     "allowImportingTsExtensions": true
   },
+  "include": ["src", "app.spec.ts"],
+  "exclude": ["node_modules", "dist"],
   "ts-node": {
     "transpileOnly": true,
     "compilerOptions": {

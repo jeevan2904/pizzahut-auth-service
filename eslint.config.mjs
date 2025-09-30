@@ -8,10 +8,13 @@ export default defineConfig(
   eslint.configs.recommended,
   tseslint.configs.recommendedTypeChecked,
   {
+    files: ['**/*.ts'],
     languageOptions: {
       parserOptions: {
+        project: './tsconfig.eslint.json',
         projectService: true,
         tsconfigRootDir: import.meta.dirname,
+        allowDefaultProject: true,
       },
     },
     rules: {
@@ -21,6 +24,6 @@ export default defineConfig(
     },
   },
   {
-    ignores: ['dist', 'node_modules', 'eslint.config.mjs'],
+    ignores: ['dist', 'node_modules', 'eslint.config.mjs', 'jest.config.cjs'],
   },
 );
