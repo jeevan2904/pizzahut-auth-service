@@ -46,7 +46,7 @@
     "forceConsistentCasingInFileNames": true,
     "allowImportingTsExtensions": true
   },
-  "include": ["src", "app.spec.ts"],
+  "include": ["src"],
   "exclude": ["node_modules", "dist"],
   "ts-node": {
     "transpileOnly": true,
